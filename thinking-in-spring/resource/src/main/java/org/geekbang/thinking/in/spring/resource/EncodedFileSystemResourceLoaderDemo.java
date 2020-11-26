@@ -45,6 +45,7 @@ public class EncodedFileSystemResourceLoaderDemo {
         Resource resource = resourceLoader.getResource(currentJavaFilePath);
         EncodedResource encodedResource = new EncodedResource(resource, "UTF-8");
         // 字符输入流
+
         try (Reader reader = encodedResource.getReader()) {
             System.out.println(IOUtils.toString(reader));
         }
